@@ -14,9 +14,9 @@ deploy:
   access_key_id: $AWS_ACCESS_KEY_ID
   secret_access_key: "$AWS_SECRET_ACCESS_KEY"
   region: "ap-south-1"
-  app: "docker-shashi1"
-  env: "DockerShashi1-env"
+  app: "docker-shashi2"
+  env: "ShashiDocker2-env"
   bucket_name: "elasticbeanstalk-ap-south-1-616711291058"
-  bucket_path: "docker-shashi1"
+  bucket_path: "docker-shashi2"
   on:
     branch: master
