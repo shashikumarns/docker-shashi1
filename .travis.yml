@@ -1,0 +1,22 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker build -t dockershashi1 -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true dockershashi1 npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: "$AWS_SECRET_ACCESS_KEY"
+  region: "ap-south-1"
+  app: "docker-shashi1"
+  env: "DockerShashi1-env"
+  bucket_name: "elasticbeanstalk-ap-south-1-616711291058"
+  bucket_path: "docker-shashi1"
+  on:
+    branch: master
