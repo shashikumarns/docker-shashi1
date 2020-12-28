@@ -16,7 +16,7 @@ deploy:
   region: "ap-south-1"
   app: "docker-shashi2"
   env: "ShashiDocker2-env"
-  bucket_name: "elasticbeanstalk-ap-south-1-616711291058"
+  bucket_name: "elasticbeanstalk-ap-south-1-616711292058"
   bucket_path: "docker-shashi2"
   on:
     branch: master
